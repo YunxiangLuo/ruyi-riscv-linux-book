@@ -1,4 +1,4 @@
-# Class 1: UART 基础与 TTY 工具
+# Class 1: 串口连接、TTY 工具与通信参数
 
 ## 本章目标
 

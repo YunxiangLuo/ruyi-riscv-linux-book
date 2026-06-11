@@ -10,19 +10,17 @@
 
 ## 三级知识点
 
-- RuyiSDK 组成与 Support Matrix
-- `ruyi` 安装与环境准备
-- QEMU `virt` 启动
-- SSH/SCP/串口登录
-- `ruyi device provision` 的使用边界
+- RuyiSDK 支持状态、安装与基础命令
+- QEMU/开发板启动与登录
+- 文件传输、provision 与 systemd 边界
 
 ## 配套实验
 
 - 安装 `ruyi`
 - 启动 QEMU 或板卡
-- 远程登录系统
+- 远程登录系统并传输文件
+- 查询 provision 并观察 systemd 服务状态
 
 ## 章节成果
 
 学生完成统一环境配置并能进入系统。
-

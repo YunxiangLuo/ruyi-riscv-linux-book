@@ -1,4 +1,4 @@
-# Lab 1: UART Echo
+# Lab 1: 串口连接、TTY 工具与通信参数
 
 ## 实验目标
 

@@ -32,8 +32,10 @@ fig-08-03-http-status-page.png
 
 正文中引用图片时，必须有编号和解释：
 
-```md
-![图 1-1 ruyi version 输出](assets/fig-01-01-ruyi-version.png)
+```text
+图片编号：图 1-1
+图片标题：ruyi version 输出
+图片路径：assets/fig-01-01-ruyi-version.png
 
 图 1-1 展示了 `ruyi version` 的输出结果，用于确认 `ruyi` 已正确安装。
 ```
@@ -45,4 +47,3 @@ fig-08-03-http-status-page.png
 - 多张图片应使用统一编号。
 - 代码应使用源码文本，不使用代码截图。
 - 引用第三方图片或资料时，应注明来源。
-

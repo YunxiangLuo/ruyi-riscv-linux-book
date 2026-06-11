@@ -10,19 +10,17 @@
 
 ## 三级知识点
 
-- host/target/sysroot
-- GCC、readelf、ldd
-- ELF 基本认识
-- Makefile 与统一工程目录
-- CoreMark/Dhrystone 的用途与边界
+- Git 基础与工程工作区
+- 工具链、Hello World 与 ELF 观察
+- Makefile 工程模板、调试记录与性能边界
 
 ## 配套实验
 
+- Git 基础操作
 - Hello World
 - ELF 观察
-- 基准测试对比
+- 调试记录与性能边界说明
 
 ## 章节成果
 
 形成“能编译、能运行、能解释二进制”的最小工程能力。
-

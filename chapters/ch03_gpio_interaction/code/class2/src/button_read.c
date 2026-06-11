@@ -104,4 +104,3 @@ int main(int argc, char **argv) {
     printf("Button read stopped after %lu event(s).\n", events);
     return 0;
 }
-

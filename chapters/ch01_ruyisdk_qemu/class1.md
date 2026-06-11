@@ -1,4 +1,4 @@
-# Class 1: RuyiSDK 组成、安装与环境准备
+# Class 1: RuyiSDK 支持状态、安装与基础命令
 
 ## 本章目标
 

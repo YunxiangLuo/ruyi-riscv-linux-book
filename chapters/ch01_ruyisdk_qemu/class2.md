@@ -1,10 +1,11 @@
-# Class 2: QEMU 启动、远程登录与设备部署边界
+# Class 2: QEMU/开发板启动与登录
 
 ## 本章目标
 
 - 使用 QEMU `virt` 或开发板进入 RISC-V Linux 系统。
 - 完成 SSH/SCP/串口登录路径验证。
 - 理解 `ruyi device provision` 的适用边界。
+- 观察 systemd 服务状态，知道部署服务是后续 Linux 应用化内容。
 
 ## 前置条件
 
@@ -15,7 +16,7 @@
 
 ## 知识简介
 
-本节课关注“能进入系统”的最小闭环。QEMU `virt` 适合承担低硬件依赖的入门任务，可以帮助学生先完成 Linux 启动、登录和文件传输；真实开发板则用于后续 GPIO、UART、外设和板级配置实验。`ruyi device provision` 适合设备镜像部署，但并不是所有实验都需要它。本节课要让学生分清 QEMU、开发板、SSH、SCP、串口和镜像部署之间的关系。
+本节课关注“能进入系统”的最小闭环。QEMU `virt` 适合承担低硬件依赖的入门任务，可以帮助学生先完成 Linux 启动、登录和文件传输；真实开发板用于 GPIO、UART、外设和板级配置实验。`ruyi device provision` 适合设备镜像部署，systemd 可用于观察系统服务状态，例如确认系统是否使用 systemd、服务是否处于 running/failed 状态。本节课要让学生分清 QEMU、开发板、SSH、SCP、串口、镜像部署和服务状态观察之间的关系。
 
 ## 环境准备
 
@@ -55,7 +56,11 @@ cat /etc/os-release
 whoami
 pwd
 ip addr
+systemctl --version
+systemctl status
 ```
+
+如果系统不使用 systemd，记录命令失败输出即可，不在本节展开 init 系统差异。
 
 ### 步骤 3：验证 SSH 登录
 
@@ -71,7 +76,7 @@ scp ./test.txt 用户名@目标IP:/tmp/
 
 ### 步骤 5：说明 `ruyi device provision` 边界
 
-先在主机侧查询，不要求本节一定刷写设备：
+先在主机侧查询 provision 帮助信息：
 
 ```bash
 ruyi --version
@@ -103,6 +108,7 @@ ruyi device provision
 | 系统启动 | 能进入 Linux shell |  |
 | SSH 登录 | 能远程登录 |  |
 | SCP 传输 | `/tmp/test.txt` 存在 |  |
+| systemd 状态观察 | 能看到 systemd 版本/服务状态，或记录当前系统不支持 systemd 的原因 |  |
 | provision 查询 | 能记录当前 `ruyi` 版本、向导中是否出现目标设备、是否需要实际刷写 |  |
 | provision 边界 | 能说明适用、不适用场景和替代路径 |  |
 
@@ -131,3 +137,4 @@ ruyi device provision
 - 能启动 QEMU 或开发板系统。
 - 能完成 SSH/SCP/串口至少一种登录或传输路径。
 - 能说明 `ruyi device provision` 的使用边界，并能记录“支持、待确认或不支持”的依据。
+- 能观察 systemd 服务状态，但不在本章展开服务部署。
