@@ -13,7 +13,7 @@
 | `ch05_peripherals_hmi` | 常用外设与人机交互 | 完成“采集—显示”局部闭环 |
 | `ch06_file_config_log` | 文件、配置与日志 | 使程序具备持久化与可维护性 |
 | `ch07_thread_tasks` | 线程与任务协同 | 让程序具备稳定运行能力 |
-| `ch08_project_network_terminal` | 综合项目一 联网信息采集终端 | 汇总前八章成果形成课程作品一 |
+| `ch08_project_network_terminal` | 综合项目一 联网信息采集终端 | 汇总 ch01-ch07 成果形成课程作品一 |
 | `ch09_camera_opencv` | Camera 与 OpenCV 应用扩展 | 引入视觉输入与基础图像处理 |
 | `ch10_tinyml_kws` | TinyML 语音关键词识别控灯 | 形成课程作品二或选修项目 |
 | `ch11_buildroot_devicetree` | Buildroot、Device Tree 与板级扩展 | 建立系统认识，不改变全书主线 |
@@ -25,11 +25,13 @@ chXX_topic/
 ├── README.md
 ├── class1.md      # 第 1 次课课程文档
 ├── class2.md      # 第 2 次课课程文档
-├── class3.md      # 内容较多章节可选
+├── class3.md
+├── class4.md      # 内容较多章节可选
 ├── lab/
 │   ├── lab1.md    # 第 1 个实验指导书
 │   ├── lab2.md    # 第 2 个实验指导书
-│   └── lab3.md    # 内容较多章节可选
+│   ├── lab3.md
+│   └── lab4.md    # 内容较多章节可选
 └── assets/        # 图片、截图和图表
 ```
 

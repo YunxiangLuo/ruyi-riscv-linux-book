@@ -52,6 +52,6 @@ ruyi-riscv-linux-book/
 7. 使用 [实验指导书模板](docs/templates/lab-template.md) 编写每章 `lab/lab*.md`。
 8. 从 `chapters/ch01_ruyisdk_qemu` 开始，完成环境准备、系统启动和登录。
 9. 继续完成 `chapters/ch02_toolchain_template`，建立工具链、Makefile 和最小工程能力。
-10. 进入 `chapters/ch03_gpio_interaction`，完成 GPIO Blink、Button 和状态机交互实验。
+10. 进入 `chapters/ch03_gpio_interaction`，完成面包板接线、GPIO Blink、Button 和状态机交互实验。
 11. 按章节顺序推进到 ch08，形成联网信息采集终端主线作品。
 12. 根据兴趣选择 ch09 到 ch11 的扩展方向。

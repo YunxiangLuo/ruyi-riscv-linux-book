@@ -1,4 +1,4 @@
-# Class 2: QEMU/开发板启动与登录
+# Class 2: 开发板配置、镜像烧录与启动登录
 
 ## 本章目标
 
@@ -26,9 +26,9 @@
 | 登录工具 | SSH、SCP、串口工具 | 能登录目标系统 |
 | 资料依据 | `docs/course-plan.md`、RuyiSDK 官方文档、RuyiSDK Support Matrix、`boards/` 板卡说明 | 对照 ch01 三级小节 |
 
-### 当前已找到的板级资料
+### 目标板资料引用
 
-| 板卡 | 可引用资料 | 当前用途 | 仍需实测 |
+| 板卡 | 可引用资料 | 课程用途 | 课堂记录要求 |
 | --- | --- | --- | --- |
 | K1 / Muse Pi Pro | RuyiSDK Support Matrix 中有 Bianbu 与 openEuler 测试记录；Bianbu 记录给出 `root` / `bianbu` 串口登录；openEuler 记录给出镜像、固件和串口登录流程 | ch01 可说明目标板镜像和登录资料来源 | 课程最终镜像、SSH/SCP/串口完整记录、`ruyi device provision` 支持情况 |
 | LicheePi 4A | Sipeed wiki 给出默认账号、烧录模式、系统串口和外设线索；RuyiSDK Support Matrix 有 LicheePi4A 目录 | K1 暂不可用时的临时验证板 | 当前镜像版本、SSH/SCP/串口完整记录、GPIO/libgpiod 实测输出 |

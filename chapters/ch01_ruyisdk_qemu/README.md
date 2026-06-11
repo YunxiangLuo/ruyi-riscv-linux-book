@@ -10,14 +10,14 @@
 
 ## 三级知识点
 
-- RuyiSDK 支持状态、安装与基础命令
-- QEMU/开发板启动与登录
+- RuyiSDK 支持矩阵、目标开发板与基础命令
+- 开发板配置、镜像烧录与启动登录
 - 文件传输、provision 与 systemd 边界
 
 ## 配套实验
 
-- 安装 `ruyi`
-- 启动 QEMU 或板卡
+- 查询 Support Matrix、记录目标板配置并安装 `ruyi`
+- 查阅 board 说明，烧录或启动镜像
 - 远程登录系统并传输文件
 - 查询 provision 并观察 systemd 服务状态
 

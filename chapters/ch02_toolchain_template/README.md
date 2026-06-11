@@ -11,15 +11,16 @@
 ## 三级知识点
 
 - Git 基础与工程工作区
-- 工具链、Hello World 与 ELF 观察
-- Makefile 工程模板、调试记录与性能边界
+- 工具链、Hello World、ELF 观察与 benchmark 边界
+- Makefile 控制编译与工程模板
 
 ## 配套实验
 
 - Git 基础操作
 - Hello World
 - ELF 观察
-- 调试记录与性能边界说明
+- benchmark 选做说明
+- Makefile 控制编译与调试记录
 
 ## 章节成果
 

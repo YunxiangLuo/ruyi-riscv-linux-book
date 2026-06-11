@@ -31,6 +31,13 @@ static int open_chip(const char *chip) {
     return open(path, O_RDONLY | O_CLOEXEC);
 }
 
+static void init_line(struct gpio_line *gpio, unsigned int line) {
+    memset(gpio, 0, sizeof(*gpio));
+    gpio->chip_fd = -1;
+    gpio->line_fd = -1;
+    gpio->line = line;
+}
+
 int gpio_open_output(struct gpio_line *gpio, const char *chip, unsigned int line,
                      int initial_value, const char *consumer) {
     struct gpiohandle_request request;
@@ -40,11 +47,7 @@ int gpio_open_output(struct gpio_line *gpio, const char *chip, unsigned int line
         return -1;
     }
 
-    memset(gpio, 0, sizeof(*gpio));
-    gpio->chip_fd = -1;
-    gpio->line_fd = -1;
-    gpio->line = line;
-
+    init_line(gpio, line);
     gpio->chip_fd = open_chip(chip);
     if (gpio->chip_fd < 0) {
         return -1;
@@ -67,6 +70,37 @@ int gpio_open_output(struct gpio_line *gpio, const char *chip, unsigned int line
     return 0;
 }
 
+int gpio_open_input(struct gpio_line *gpio, const char *chip, unsigned int line,
+                    const char *consumer) {
+    struct gpiohandle_request request;
+
+    if (gpio == NULL) {
+        errno = EINVAL;
+        return -1;
+    }
+
+    init_line(gpio, line);
+    gpio->chip_fd = open_chip(chip);
+    if (gpio->chip_fd < 0) {
+        return -1;
+    }
+
+    memset(&request, 0, sizeof(request));
+    request.lineoffsets[0] = line;
+    request.flags = GPIOHANDLE_REQUEST_INPUT;
+    request.lines = 1;
+    snprintf(request.consumer_label, sizeof(request.consumer_label), "%s",
+             consumer != NULL ? consumer : "ruyi-gpio-input");
+
+    if (ioctl(gpio->chip_fd, GPIO_GET_LINEHANDLE_IOCTL, &request) < 0) {
+        gpio_close(gpio);
+        return -1;
+    }
+
+    gpio->line_fd = request.fd;
+    return 0;
+}
+
 int gpio_set_value(const struct gpio_line *gpio, int value) {
     struct gpiohandle_data data;
 
@@ -79,6 +113,23 @@ int gpio_set_value(const struct gpio_line *gpio, int value) {
     data.values[0] = value ? 1 : 0;
 
     return ioctl(gpio->line_fd, GPIOHANDLE_SET_LINE_VALUES_IOCTL, &data);
+}
+
+int gpio_get_value(const struct gpio_line *gpio, int *value) {
+    struct gpiohandle_data data;
+
+    if (gpio == NULL || gpio->line_fd < 0 || value == NULL) {
+        errno = EINVAL;
+        return -1;
+    }
+
+    memset(&data, 0, sizeof(data));
+    if (ioctl(gpio->line_fd, GPIOHANDLE_GET_LINE_VALUES_IOCTL, &data) < 0) {
+        return -1;
+    }
+
+    *value = data.values[0] ? 1 : 0;
+    return 0;
 }
 
 void gpio_close(struct gpio_line *gpio) {

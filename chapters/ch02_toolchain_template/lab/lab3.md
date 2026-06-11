@@ -1,4 +1,4 @@
-# Lab 3: Makefile 工程模板、调试记录与性能边界
+# Lab 3: Makefile 控制编译与工程模板
 
 ## 实验目标
 
