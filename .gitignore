@@ -1,0 +1,50 @@
+# Build artifacts
+build/
+dist/
+out/
+output/
+tmp/
+temp/
+*.o
+*.a
+*.so
+*.elf
+*.bin
+*.img
+*.iso
+*.dtb
+*.dtbo
+
+# Logs
+*.log
+logs/
+
+# Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Office temporary files
+~$*
+*.tmp
+
+# Generated course artifacts
+slides/**/*.pdf
