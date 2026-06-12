@@ -320,7 +320,7 @@
 | 4 | LLM + 传感器融合 | 自然语言查询传感器数据、LLM 生成 GPIO 控制指令、Agent 工具调用 |
 | 5 | 视觉大语言模型（VLM）概述 | LLaVA/MiniCPM-V 架构、vision encoder + projection + LLM、多模态输入 |
 | 6 | VLM RISC-V 部署与调优 | llama.cpp llava 支持、tiny-vision 模型、图像理解与问答 |
-| 🧪 实验 | LicheePi 4A 部署 Qwen2.5-0.5B（llama.cpp），实现传感器数据自然语言问答 |
+| 🧪 实验 | LicheePi 4A 部署视觉大语言模型（llama.cpp），实现视觉大语言模型 SeeTheWorld（仝嘉成 科学日项目） |
 
 ---
 
