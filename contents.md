@@ -244,7 +244,7 @@
 | 4 | 向量存储与段操作 | vse8/vse32 存储结果、vlsseg/vssseg 跨步/分段加载存储（矩阵场景） |
 | 5 | 向量归约与排列 | vredsum/vredmax 归约、vrgather/vslideup/vslidedown 数据重排 |
 | 6 | 向量与标量混合编程 | C 函数中嵌入 intrinsics、编译器优化屏障、volatile 与内存序 |
-| 🧪 实验 | 使用 RVV intrinsics 编写向量化 SAXPY、矩阵加法 -> LicheePi 4A 实测加速比 |
+| 🧪 实验 | 使用 RVV intrinsics 编写 RVV opencv 各种算法加速（韩柳彤项目），对比标量版本性能 -> K1 实测加速比 |
 
 ### 第3讲 常用算法向量化优化
 
