@@ -1,6 +1,6 @@
 ## 《RISC-V Linux 应用编程与边缘智能》课程大纲
 
-> **目标平台**：LicheePi 4A（TH1520，RISC-V 64 位，4×C910）  
+> **目标平台**：LicheePi 4A（TH1520，RISC-V 64 位，4×C910） K3 
 > **操作系统**：OpenRuyi（openEuler RISC-V）  
 > **外设**：面包板、LED 灯珠、按键、继电器模块、光敏/电位器、DHT22 温湿度传感器、OLED 显示屏（SSD1306）、USB 摄像头 、杜邦线 
 > **总学时**：48 课时（6 章 × 4 讲 × 2 课时）  
@@ -16,8 +16,8 @@
 |---|--------|------|
 | 1 | RISC-V 指令集架构概述 | 模块化 ISA 设计（RV64GC）、特权级别、与 x86/ARM 的异同 |
 | 2 | RuyiSDK 与 开发板矩阵 | Sipeed LicheePi 4A、VisionFive 2、Milk-V Duo 等主流开发板对比 |
-| 3 | LicheePi 4A 硬件认知 | TH1520 SoC 参数、40pin GPIO 引脚图、板载资源（USB/HDMI/Ethernet/MIPI） |
-| 4 | Ubuntu RISC-V 镜像烧录 | 使用 fastboot/ruyi 烧录 Revylution OS 镜像、分区结构 |
+| 3 | LicheePi 4A (K3) 硬件认知 | TH1520 SoC 参数、40pin GPIO 引脚图、板载资源（USB/HDMI/Ethernet/MIPI） |
+| 4 | OpenRuyi RISC-V 镜像烧录 | 使用 fastboot/ruyi 烧录 Revylution OS 镜像、分区结构 |
 | 5 | 首次启动与系统配置 | 串口+HDMI 登录、网络配置、apt 换源、locale 与时区设置 |
 | 6 | SSH/SCP 远程访问 | sshd 配置、免密登录（密钥对）、SCP 文件传输、串口终端（minicom/screen） |
 | 🧪 实验 | LicheePi 4A 镜像烧录、网络配置与 SSH 登录 |
