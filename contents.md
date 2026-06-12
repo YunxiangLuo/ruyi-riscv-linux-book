@@ -31,7 +31,7 @@
 | # | 知识点 | 内容 |
 |---|--------|------|
 | 1 | 交叉编译原理 | host/target 概念、RISC-V GNU Toolchain 组成（gcc/binutils/glibc） |
-| 2 | RISC-V 工具链安装与验证 | ruyi 包管理器安装 toolchain、环境变量、riscv64-unknown-linux-gnu-gcc --version |
+| 2 | RuyiSDK RISC-V 工具链安装与验证 | ruyi 包管理器安装 toolchain、环境变量、riscv64-unknown-linux-gnu-gcc --version |
 | 3 | 第一个 RISC-V 程序 | Hello World 的编译->传输->运行全流程，file/readelf 观察 ELF 属性 |
 | 4 | GCC 编译选项精讲 | -O0/-O2/-O3/-Os、-march=rv64gc、-mabi=lp64d、-static 与动态链接对比 |
 | 5 | Makefile 编写与工程管理 | 规则/变量/自动变量、伪目标 clean/dist、多目录工程组织 |
