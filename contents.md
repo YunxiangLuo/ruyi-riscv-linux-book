@@ -1,4 +1,4 @@
-## 《RISC-V Linux 应用编程与边缘智能》课程大纲
+## 《RISC-V 嵌入式应用编程技术》课程大纲
 
 > **目标平台**：LicheePi 4A（TH1520，RISC-V 64 位，4×C910） K3 
 > **操作系统**：OpenRuyi（openEuler RISC-V）  
